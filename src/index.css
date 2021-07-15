@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  padding: 2rem 0;
+  min-width: 768px;
+  max-width: 1024px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  min-height: 50px;
+}
+
+.label {
+  width: 30%;
+}
+
+.formContainer {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.required {
+  color: red;
+}
+.dateInput {
+  outline: none;
+  border: 1px solid #c1c4d6;
+  border-radius: 4px;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.divider {
+  height: 1px;
+  background: #c1c4d6;
+  margin: 1rem 0;
+}
