@@ -13,43 +13,7 @@ import {
 import { data } from "../data/data";
 
 const FormPages = () => {
-  const [employeeData, setEmployeeData] = useState([
-    {
-      id: 1,
-      employee_name: "Tiger Nixon",
-      employee_salary: 320800,
-      employee_age: 61,
-      profile_image: "",
-    },
-    {
-      id: 2,
-      employee_name: "Tiger Nixon",
-      employee_salary: 320800,
-      employee_age: 61,
-      profile_image: "",
-    },
-    {
-      id: 3,
-      employee_name: "Tiger Nixon",
-      employee_salary: 320800,
-      employee_age: 61,
-      profile_image: "",
-    },
-    {
-      id: 4,
-      employee_name: "Tiger Nixon",
-      employee_salary: 320800,
-      employee_age: 61,
-      profile_image: "",
-    },
-    {
-      id: 5,
-      employee_name: "Tiger Nixon",
-      employee_salary: 320800,
-      employee_age: 61,
-      profile_image: "",
-    },
-  ]);
+  const [employeeData, setEmployeeData] = useState([]);
   const [name, setName] = useState("");
   const [distCenter, setDistCenter] = useState("");
   const [paymentType, setPaymentType] = useState("");
@@ -66,16 +30,16 @@ const FormPages = () => {
     },
   ]);
 
-  //   const fetchData = () => {
-  //     axios
-  //       .get("http://dummy.restapiexample.com/api/v1/employees")
-  //       .then((res) => setEmployeeData(res.data.data))
-  //       .catch((err) => console.log(err));
-  //   };
+  const fetchData = () => {
+    axios
+      .get("http://dummy.restapiexample.com/api/v1/employees")
+      .then((res) => setEmployeeData(res.data.data))
+      .catch((err) => console.log(err));
+  };
 
-  //   useEffect(() => {
-  //     fetchData();
-  //   }, []);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   useEffect(() => {
     setDisableConfirm(checkDisableConfirm());
